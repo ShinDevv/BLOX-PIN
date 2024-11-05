@@ -11,20 +11,20 @@ print('================================================\n PIN CRACKER | REMODDED
 print('')
 print('Enter your cookie below:')
 cookie = input()
-os.system("cls")
+os.system("clear")
 print('')
 print('Enter your webhook below:')
 webhook = input()
-os.system("cls")
+os.system("clear")
 print('')
 print('Should we ping Everyone?: ( y / n )')
 pingEveryone = input()
-os.system("cls")
+os.system("clear")
 if pingEveryone.lower == 'y' or pingEveryone == 'yes':
     ping = '@everyone'
 else:
     ping = 'Pin Successfully Cracked!'
-os.system("cls")
+os.system("clear")
 
 print('''Cracker Has Started.''')
 
